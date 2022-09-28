@@ -17,5 +17,8 @@ namespace capaNegocio
         {
             return cddatos.Listar();
         }
+        public DataSet consulta() {
+            return cddatos.consulta();
+        }
     }
 }
