@@ -52,6 +52,7 @@ namespace examen
             cecliente.nombre = txtnombre.Text;
             cecliente.apellido = txtapellido.Text;
             cecliente.valor = txtdirrecion.Text;
+            gridDatos.DataSource = cncliente.consulta().Tables["tbl"];
         }
 
         private void gridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
