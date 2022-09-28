@@ -140,3 +140,5 @@ insert into categoria(idCategoria,descripcion) values(1,'Bronce');
 insert into categoria(idCategoria,descripcion) values(2,'Silver');
 insert into categoria(idCategoria,descripcion) values(3,'Gold');
 insert into categoria(idCategoria,descripcion) values(4,'Platinum');
+insert into cliente(idCliente,cedula,nombre,apellido,genero,fechaNacimiento,categoria) values(1,'0950578942','JOSE','PEÑA',1,now(),1); 
+insert into contacto(idContacto,cliente,tipoContacto,valor) values(1,1,1,"Las Peñas");
