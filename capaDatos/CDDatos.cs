@@ -34,5 +34,25 @@ namespace capaDatos
             return dataSet;
 
         }
+        public DataSet consulta()
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
+            mySqlConnection.Open();
+            CECliente cecliente = new CECliente();
+            String query = "SELECT * FROM cliente where cedula='" + cecliente.cedula+ "'";
+            DataSet dataSet = new DataSet();
+            try
+            {
+                MySqlDataAdapter adaptador;
+                
+                adaptador = new MySqlDataAdapter(query, mySqlConnection);
+                adaptador.Fill(dataSet, "tbl");
+                return dataSet;
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return dataSet;
+}
     }
 }
